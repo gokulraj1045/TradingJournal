@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Project.Models.Journal>
+
+@{
+    Layout = "~/views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <h3 class="page-title"> View Journal</h3>
+</div>
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SymbolName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClosePrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Loss)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Journal1)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SymbolName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntryPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClosePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Loss)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Journal1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.JournalId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.JournalId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.JournalId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+        </div>
+    </div>
+</div>

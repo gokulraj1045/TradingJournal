@@ -1,0 +1,220 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/views/Shared/_Layout.cshtml";
+}
+<div class="page-header">
+    <h3 class="page-title">
+        <span class="page-title-icon bg-gradient-primary text-white me-2">
+            <i class="mdi mdi-home"></i>
+        </span> Dashboard
+    </h3>
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                <span></span>Overview <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="row">
+    <div class="col-md-4 stretch-card grid-margin">
+        <div class="card bg-gradient-danger card-img-holder text-white">
+            <div class="card-body">
+                <img src="~/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                <h4 class="font-weight-normal mb-3">
+                    Account Balance <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                </h4>
+                <h2 class="mb-5">15,0000</h2>
+                <h6 class="card-text">Increased by 60%</h6>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 stretch-card grid-margin">
+        <div class="card bg-gradient-info card-img-holder text-white">
+            <div class="card-body">
+                <img src="~/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                <h4 class="font-weight-normal mb-3">
+                    Profit <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                </h4>
+                <h2 class="mb-5">45,6334</h2>
+                <h6 class="card-text">Decreased by 10%</h6>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 stretch-card grid-margin">
+        <div class="card bg-gradient-success card-img-holder text-white">
+            <div class="card-body">
+                <img src="~/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                <h4 class="font-weight-normal mb-3">
+                    Percentage <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                </h4>
+                <h2 class="mb-5">95,5741</h2>
+                <h6 class="card-text">Increased by 5%</h6>
+            </div>
+        </div>
+    </div>
+    </div>
+<div>
+    <div class="col-md-15 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="clearfix">
+                    <h4 class="card-title float-left">Watchlist</h4>
+                    <div id="visit-sale-chart-legend" class="rounded-legend legend-horizontal legend-top-right float-right"></div>
+                </div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+       
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                          {
+                          "width": "1250",
+                          "height": "600",
+                          "symbolsGroups": [
+                            {
+                              "name": "Indices",
+                              "originalName": "Indices",
+                              "symbols": [
+                                {
+                                  "name": "FOREXCOM:SPXUSD",
+                                  "displayName": "S&P 500"
+                                },
+                                {
+                                  "name": "FOREXCOM:NSXUSD",
+                                  "displayName": "US 100"
+                                },
+                                {
+                                  "name": "FOREXCOM:DJI",
+                                  "displayName": "Dow 30"
+                                },
+                                {
+                                  "name": "INDEX:NKY",
+                                  "displayName": "Nikkei 225"
+                                },
+                                {
+                                  "name": "INDEX:DEU40",
+                                  "displayName": "DAX Index"
+                                },
+                                {
+                                  "name": "FOREXCOM:UKXGBP",
+                                  "displayName": "UK 100"
+                                },
+                                {
+                                  "name": "BSE:SENSEX"
+                                },
+                                {
+                                  "name": "BSE:BANKBARODA"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Futures",
+                              "originalName": "Futures",
+                              "symbols": [
+                                {
+                                  "name": "CME_MINI:ES1!",
+                                  "displayName": "S&P 500"
+                                },
+                                {
+                                  "name": "CME:6E1!",
+                                  "displayName": "Euro"
+                                },
+                                {
+                                  "name": "COMEX:GC1!",
+                                  "displayName": "Gold"
+                                },
+                                {
+                                  "name": "NYMEX:CL1!",
+                                  "displayName": "Crude Oil"
+                                },
+                                {
+                                  "name": "NYMEX:NG1!",
+                                  "displayName": "Natural Gas"
+                                },
+                                {
+                                  "name": "CBOT:ZC1!",
+                                  "displayName": "Corn"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Bonds",
+                              "originalName": "Bonds",
+                              "symbols": [
+                                {
+                                  "name": "CME:GE1!",
+                                  "displayName": "Eurodollar"
+                                },
+                                {
+                                  "name": "CBOT:ZB1!",
+                                  "displayName": "T-Bond"
+                                },
+                                {
+                                  "name": "CBOT:UB1!",
+                                  "displayName": "Ultra T-Bond"
+                                },
+                                {
+                                  "name": "EUREX:FGBL1!",
+                                  "displayName": "Euro Bund"
+                                },
+                                {
+                                  "name": "EUREX:FBTP1!",
+                                  "displayName": "Euro BTP"
+                                },
+                                {
+                                  "name": "EUREX:FGBM1!",
+                                  "displayName": "Euro BOBL"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Forex",
+                              "originalName": "Forex",
+                              "symbols": [
+                                {
+                                  "name": "FX:EURUSD",
+                                  "displayName": "EUR/USD"
+                                },
+                                {
+                                  "name": "FX:GBPUSD",
+                                  "displayName": "GBP/USD"
+                                },
+                                {
+                                  "name": "FX:USDJPY",
+                                  "displayName": "USD/JPY"
+                                },
+                                {
+                                  "name": "FX:USDCHF",
+                                  "displayName": "USD/CHF"
+                                },
+                                {
+                                  "name": "FX:AUDUSD",
+                                  "displayName": "AUD/USD"
+                                },
+                                {
+                                  "name": "FX:USDCAD",
+                                  "displayName": "USD/CAD"
+                                }
+                              ]
+                            }
+                          ],
+                          "showSymbolLogo": true,
+                          "colorTheme": "light",
+                          "isTransparent": false,
+                          "locale": "en"
+                        }
+                    </script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ </div>
+
+<div class="card">
+    <div class="card-body">
+        <h4>Crypto</h4>
+        <iframe src="https://in.widgets.investing.com/top-cryptocurrencies?theme=darkTheme" width="1250px" height="450px" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
+      
+    </div>
+</div>

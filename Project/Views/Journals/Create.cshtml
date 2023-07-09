@@ -1,0 +1,73 @@
+﻿@model Project.Models.Journal
+
+@{
+    Layout = "~/views/Shared/_Layout.cshtml";
+}
+<div class="page-header">
+    <h3 class="page-title">Add Your Trade Journal</h3>
+</div>
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Enter Your Trade Details </h4>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="JournalId" class="control-label"></label>
+                <input asp-for="JournalId" class="form-control" />
+                <span asp-validation-for="JournalId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SymbolName" class="control-label"></label>
+                <input asp-for="SymbolName" class="form-control" />
+                <span asp-validation-for="SymbolName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Created" class="control-label"></label>
+                <input asp-for="Created" class="form-control" />
+                <span asp-validation-for="Created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EntryPrice" class="control-label"></label>
+                <input asp-for="EntryPrice" class="form-control" />
+                <span asp-validation-for="EntryPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClosePrice" class="control-label"></label>
+                <input asp-for="ClosePrice" class="form-control" />
+                <span asp-validation-for="ClosePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profit" class="control-label"></label>
+                <input asp-for="Profit" class="form-control" />
+                <span asp-validation-for="Profit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Loss" class="control-label"></label>
+                <input asp-for="Loss" class="form-control" />
+                <span asp-validation-for="Loss" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Journal1" class="control-label"></label>
+                <input asp-for="Journal1" class="form-control" />
+                <span asp-validation-for="Journal1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
